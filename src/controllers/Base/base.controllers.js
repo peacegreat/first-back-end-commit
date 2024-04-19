@@ -15,7 +15,18 @@ const httpGetAPPAbout = async (req, res) => {
     return res.status(500).json({ msg: error.message });
   }
 };
+
+const httpGetAppLogin = async (req, res) => {
+  try {
+    return res.status(200).sendFile("login.html", {
+      root: path.join(__dirname.split("controllers")[0] + "/views"),
+    });
+  } catch (error) {
+    return res.status(500).json({ msg: error.message });
+  }
+}
 module.exports = {
   httpGetAPPAbout,
   httpGetAPPBase,
+  httpGetAppLogin
 };

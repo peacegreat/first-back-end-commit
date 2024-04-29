@@ -1,7 +1,7 @@
 const { request } = require("express");
 
 const aboutmidddleware = (req, res, next) => {
-    const database = {email:"example@gmial.com", password: "come1"}
+    const database = {email:"example@gmail.com", password: "come1"}
     const {email, password}= req.body
     try {
         if(
